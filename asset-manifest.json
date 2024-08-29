@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Flashcard-Quiz-App-using-React/static/css/main.9b0b422c.css",
+    "main.js": "/Flashcard-Quiz-App-using-React/static/js/main.84467639.js",
+    "static/js/453.3acf8a12.chunk.js": "/Flashcard-Quiz-App-using-React/static/js/453.3acf8a12.chunk.js",
+    "index.html": "/Flashcard-Quiz-App-using-React/index.html",
+    "main.9b0b422c.css.map": "/Flashcard-Quiz-App-using-React/static/css/main.9b0b422c.css.map",
+    "main.84467639.js.map": "/Flashcard-Quiz-App-using-React/static/js/main.84467639.js.map",
+    "453.3acf8a12.chunk.js.map": "/Flashcard-Quiz-App-using-React/static/js/453.3acf8a12.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b0b422c.css",
+    "static/js/main.84467639.js"
+  ]
+}
