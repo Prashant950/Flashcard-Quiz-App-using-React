@@ -1,38 +1,249 @@
-.App {
-  text-align: center;
+/* src/App.css */
+
+/* Basic reset and font styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Dark Mode Styles */
+.app.dark-mode {
+  background-color: #333;
+  color: #eee;
+}
+
+.app.dark-mode h1 {
+  color: #ffc107;
+}
+
+/* Form Styling */
+.flashcard-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.flashcard-form input,
+.flashcard-form select,
+.flashcard-form button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.flashcard-form input:focus,
+.flashcard-form select:focus,
+.flashcard-form button:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.flashcard-form button {
+  background-color: #007bff;
   color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.flashcard-form button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Flashcard List and Flashcard Styles */
+.flashcard-list {
+  width: 90%;
+  max-width: 500px;
+  margin-bottom: 20px;
 }
+
+.flashcard {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.flashcard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Quiz Mode Styles */
+.quiz-mode {
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-mode .flashcard {
+  margin: 20px 0;
+}
+
+.quiz-mode button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-mode button:hover {
+  background-color: #218838;
+}
+
+.quiz-mode button:focus {
+  outline: none;
+}
+
+/* Progress Tracker Styles */
+.progress-tracker {
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.progress-tracker h2 {
+  font-size: 1.5rem;
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+.progress-tracker p {
+  font-size: 1.2rem;
+}
+
+/* Dark Mode Specific Element Styles */
+.app.dark-mode .flashcard-form,
+.app.dark-mode .flashcard,
+.app.dark-mode .quiz-mode,
+.app.dark-mode .progress-tracker {
+  background-color: #444;
+  color: #eee;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.app.dark-mode .flashcard-form input,
+.app.dark-mode .flashcard-form select,
+.app.dark-mode .flashcard-form button {
+  border-color: #666;
+  background-color: #555;
+  color: #eee;
+}
+
+.app.dark-mode .flashcard-form button {
+  background-color: #ffc107;
+}
+
+.app.dark-mode .flashcard-form button:hover {
+  background-color: #e0a800;
+}
+
+.app.dark-mode .flashcard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+}
+
+.app.dark-mode .quiz-mode button {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.app.dark-mode .quiz-mode button:hover {
+  background-color: #e0a800;
+}
+
+.app.dark-mode .progress-tracker h2 {
+  color: #ffc107;
+}
+
+/* Button and Dark Mode Toggle */
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.app.dark-mode button {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.app.dark-mode button:hover {
+  background-color: #e0a800;
+}
+
+.app.dark-mode button:active {
+  transform: scale(0.95);
+}
+
+select {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+
